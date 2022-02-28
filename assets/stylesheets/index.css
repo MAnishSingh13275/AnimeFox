@@ -2,17 +2,31 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    
+    
 }
 
 :root{
-    --primary-color:#F8AF3F;
+    --primary-color:#f8af3f;
+    --btn-1: #d0e6a5;
+    --btn-2: #ffdd95;
+    --btn-3: #fc887b;
+    --btn-4: #ccabda;
 }
-a{
+a{  
+    color: var(--primary-color);
     text-decoration: none;
+    
+}
+a:hover{
+    color: var(--primary-color);
+}
+li{
+    list-style: none;
 }
 body{
     background-color: #111114;
-    font-family: Montserrat,Arial;
     font-size: 14px;
     line-height: 1.3em;
     font-weight: 100;
@@ -22,10 +36,26 @@ body{
 
 
 /* Navbar */
-.nav-link ul{
+
+.nav-item{
+    margin-left: 1rem;
+}
+.head-btn{
+    color: white !important; 
+}
+.inner-link-container{
+    padding-top: 1rem;
     display: grid;
+    gap: 1rem;
     grid-template-columns: repeat(2,1fr);
 }
+
+.btn-1{color: var(--btn-1);}
+.btn-2{color: var(--btn-2);}
+.btn-3{color: var(--btn-3);}
+.btn-4{color: var(--btn-4);}
+
+
 .offcanvas{
     color: #fff;
     background-color: rgb(26, 26, 26);
@@ -45,14 +75,15 @@ body{
     justify-content: center;
     align-items: center;
     color: var(--primary-color);
+    
 }
 .primary-heading h1{
-
+    max-width: 42vw;
+    font-size: 3rem;
     font-weight: 700;
-    max-width: 34vw;
 }
 
-/* second section */
+/* trending section */
 
 .trending-section{
 color: var(--primary-color);
@@ -60,7 +91,7 @@ color: var(--primary-color);
 .trending{
 display: flex;
 justify-content: space-between;
-align-self: end;
+
     
 }
 .side-img img{
@@ -74,6 +105,9 @@ align-self: end;
     display: flex;
     justify-content: space-between;
     padding: 0 2rem;
+}
+.st-btn:hover{
+    transform: translatey(-5px);
 }
 .share-icon {
     background-image: url(../images/icons/share-icon.gif);
@@ -172,6 +206,7 @@ align-self: end;
     margin: 0;
 }
 .inner-container{
+    margin-left: 2rem;
     max-width: 70vw;
     display: grid;
     grid-template-columns: repeat(6, 1fr) ;
@@ -238,6 +273,10 @@ footer{
 
 @media screen and (max-width: 1080px){
 
+    .primary-heading h1{
+        max-width: 42vw;
+        font-size: 3rem;
+    }
     .card-group{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -249,13 +288,26 @@ footer{
         display: grid;
         grid-template-columns: repeat(4, 1fr) ;
     }
+    .footer-btn{
+        margin-left: 1rem;
+    }
+    .footer-logo{
+       margin-left: 1rem;
+   }
 
+}
+@media screen and (max-width: 910px){
+    .primary-heading h1{
+        max-width: 46vw;
+        font-size: 3rem;
+    }
 }
 
 @media screen and (max-width: 768px){
 
     .primary-heading h1{
-        max-width: 40vw;
+        max-width: 55vw;
+        font-size: 3rem;
     }
     .card-group{
         display: grid;
@@ -279,32 +331,49 @@ footer{
         display: none;
         height: 0;
      }
+     .footer-btn{
+         margin-left: 1rem;
+     }
+     .footer-logo{
+        margin-left: 1rem;
+    }
 }
-@media screen and (max-width: 563px){
+@media screen and (max-width: 698px){
 
     .navbar-brand img{
         width: 4rem;
         height: 1.5rem;
     }
     .primary-heading h1{
-        font-size: medium;
-        max-width: 45vw;
+        font-size: 2rem;
+        max-width: 50vw;
     }
     .inner-container{
-        min-width: 100vw;
+        
         display: grid;
         grid-template-columns: repeat(3,1fr);
     }
-
+    .footer-btn {
+        margin: 0 1rem;
+        max-width: 25vw;
+        display: grid;
+        grid-template-columns: repeat(2,6rem);
+    }
+    .footer-btn .st-btn{
+        margin-top: 1rem;
+    }
+    .footer-logo{
+        margin-left: 1rem;
+    }
 
 }
 @media screen and (max-width: 530px){
 
     .primary-heading h1{
-        max-width: 50vw;
+        font-size: 1.5rem;
+        max-width: 54vw;
     }
     .inner-container{
-        min-width: 100vw;
         display: grid;
         grid-template-columns: repeat(2,1fr);
     }
@@ -312,5 +381,14 @@ footer{
         display: none;
         width: 0;
         height: 0;
+    }
+    .footer-btn {
+        margin: 1rem 1rem;
+        max-width: 25vw;
+        display: grid;
+        grid-template-columns: repeat(2,6rem);
+    }
+    .footer-btn .st-btn{
+        margin-top: 1rem;
     }
 }
